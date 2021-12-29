@@ -43,7 +43,6 @@ uat)
 prod)
   echo "creates files from template..."
   mkdir -p dist/dist && \
-    cp template/build-site.sh dist/dist/build-site.sh && \
     envsubst < template/${IMAGE_NAME}.ini > dist/dist/${IMAGE_NAME}.ini && \
     envsubst < template/container-${IMAGE_NAME}.service > dist/container-${IMAGE_NAME}.service
 

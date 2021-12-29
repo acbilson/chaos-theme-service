@@ -9,8 +9,6 @@ dev)
 docker run --rm \
   --expose ${EXPOSED_PORT} -p ${EXPOSED_PORT}:${CONTAINER_PORT} \
   -e "FLASK_SECRET_KEY=${FLASK_SECRET_KEY}" \
-  -e "UAT_CONTENT_SRC=${UAT_CONTENT_SRC}" \
-  -e "PRD_CONTENT_SRC=${PRD_CONTENT_SRC}" \
   -v ${CODE_SOURCE_SRC}:${CODE_SOURCE_DST} \
   -v ${DEV_CONTENT_SRC}:${CONTENT_DST} \
   --name ${IMAGE_NAME} \

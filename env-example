@@ -44,7 +44,7 @@ CONTAINER_PORT=80
 
 # The port exposed by the service outside the container instance.
 # Adds one for uat to avoid prod/uat port conflict
-EXPOSED_PORT=3000
+EXPOSED_PORT=9100
 UAT_EXPOSED_PORT=$(expr $EXPOSED_PORT + 1)
 
 # UAT & Prod /dist path where files go for remote image builds

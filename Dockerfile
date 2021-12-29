@@ -44,6 +44,7 @@ ENTRYPOINT ["python", "-m", "flask", "run", "--host=0.0.0.0", "--port=80"]
 #####
 
 FROM base as uat
+EXPOSE 80
 WORKDIR /app/src
 ENV FLASK_ENV production
 ENTRYPOINT ["/root/.local/bin/uwsgi", "--ini", "/etc/chaos-theme-service/chaos-theme-service.ini"]
@@ -53,6 +54,7 @@ ENTRYPOINT ["/root/.local/bin/uwsgi", "--ini", "/etc/chaos-theme-service/chaos-t
 ############
 
 FROM base as prod
+EXPOSE 80
 WORKDIR /app/src
 ENV FLASK_ENV production
 ENTRYPOINT ["/root/.local/bin/uwsgi", "--ini", "/etc/chaos-theme-service/chaos-theme-service.ini"]
