@@ -1,2 +1,1 @@
-# chaos-theme-service
-A sidecar service for Hugo builds for chaos-theme
+A sidecar service for chaos-theme Hugo builds.
