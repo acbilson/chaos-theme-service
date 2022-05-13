@@ -19,7 +19,7 @@ RUN apk add pcre-dev git
 
 # load uwsgi config
 RUN mkdir -p /etc/chaos-theme-service
-COPY ./dist/chaos-theme-service.ini /etc/chaos-theme-service
+COPY ./template/chaos-theme-service.ini /etc/chaos-theme-service
 
 # install source code
 COPY ./src /app/src
